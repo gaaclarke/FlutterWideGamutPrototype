@@ -9,6 +9,8 @@
   if (self) {
     CIImage *image = [CIImage imageWithContentsOfURL:location];
     CIContext *context = [[CIContext alloc] init];
+    // Notice that we are going to decompress the image to RGB Linear, which
+    // matches the color space of the render surface.
     CGColorSpaceRef rgb =
         CGColorSpaceCreateWithName(kCGColorSpaceGenericRGBLinear);
     NSMutableData *temp = [[NSMutableData alloc]
@@ -25,6 +27,8 @@
         initWithLength:image.extent.size.width * image.extent.size.height * 8];
     const float *inPtr = static_cast<const float *>(temp.bytes);
     uint64_t *outPtr = static_cast<uint64_t *>(data.mutableBytes);
+
+    // Convert RGBAf to BGRA10_XR.
     for (int i = 0; i < image.extent.size.height; ++i) {
       for (int j = 0; j < image.extent.size.width; ++j) {
         float r = inPtr[0];

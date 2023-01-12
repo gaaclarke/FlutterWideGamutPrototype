@@ -12,6 +12,8 @@
 
   _view = (MTKView *)self.view;
 
+  // Notice that here we are setting the rendering surface to a 64bit/pixel
+  // format and making sure that the color space is RGB Linear.
   _view.colorPixelFormat = MTLPixelFormatBGR10_XR;
   CGColorSpaceRef linearRgb =
       CGColorSpaceCreateWithName(kCGColorSpaceGenericRGBLinear);
