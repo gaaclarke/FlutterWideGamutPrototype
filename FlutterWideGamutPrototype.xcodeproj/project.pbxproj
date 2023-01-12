@@ -1,0 +1,366 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0D7843192970D3EE00E5B44B /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D7843182970D3EE00E5B44B /* logo.png */; };
+		3A30EDF91EB67EA800B4FC0B /* Image.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3A30EDF81EB67EA800B4FC0B /* Image.mm */; };
+		3AF7EA0A1EB64A46003BB06D /* Renderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF7E9BF1EB64A46003BB06D /* Renderer.m */; };
+		3AFD65631F71A7240008A125 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AFD65471F71A7070008A125 /* LaunchScreen.storyboard */; };
+		3AFD65641F71A7240008A125 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AFD65491F71A7070008A125 /* Main.storyboard */; };
+		3AFD656C1F71A8980008A125 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFD656B1F71A8910008A125 /* AppDelegate.m */; };
+		3AFD656F1F71A89E0008A125 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFD656A1F71A8900008A125 /* ViewController.m */; };
+		3AFD65721F71A8A10008A125 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFD65691F71A8900008A125 /* main.m */; };
+		63B42F161ED2063300859D09 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 3AF7E9C11EB64A46003BB06D /* Shaders.metal */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0D7843182970D3EE00E5B44B /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		3A30EDF71EB67EA800B4FC0B /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
+		3A30EDF81EB67EA800B4FC0B /* Image.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Image.mm; sourceTree = "<group>"; };
+		3AF7E9BE1EB64A46003BB06D /* Renderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Renderer.h; sourceTree = "<group>"; };
+		3AF7E9BF1EB64A46003BB06D /* Renderer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Renderer.m; sourceTree = "<group>"; };
+		3AF7E9C01EB64A46003BB06D /* ShaderTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShaderTypes.h; sourceTree = "<group>"; };
+		3AF7E9C11EB64A46003BB06D /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
+		3AF7E9C81EB64A46003BB06D /* FlutterWideGamutPrototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlutterWideGamutPrototype.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AFD65481F71A7070008A125 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3AFD654A1F71A7070008A125 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3AFD654B1F71A7070008A125 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AFD65691F71A8900008A125 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3AFD656A1F71A8900008A125 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3AFD656B1F71A8910008A125 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3AFD65741F71A8A70008A125 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3AFD65751F71A8AB0008A125 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3AF7E9C51EB64A46003BB06D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3AF7E9B71EB64A46003BB06D = {
+			isa = PBXGroup;
+			children = (
+				3AFD65471F71A7070008A125 /* LaunchScreen.storyboard */,
+				3AFD65491F71A7070008A125 /* Main.storyboard */,
+				3AFD654B1F71A7070008A125 /* Info.plist */,
+				3AF7E9BC1EB64A46003BB06D /* src */,
+				3AFD65411F71A6D00008A125 /* assets */,
+				3AF7E9C91EB64A46003BB06D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3AF7E9BC1EB64A46003BB06D /* src */ = {
+			isa = PBXGroup;
+			children = (
+				3AFD65741F71A8A70008A125 /* AppDelegate.h */,
+				3AFD656B1F71A8910008A125 /* AppDelegate.m */,
+				3A30EDF71EB67EA800B4FC0B /* Image.h */,
+				3A30EDF81EB67EA800B4FC0B /* Image.mm */,
+				3AF7E9BE1EB64A46003BB06D /* Renderer.h */,
+				3AF7E9BF1EB64A46003BB06D /* Renderer.m */,
+				3AF7E9C11EB64A46003BB06D /* Shaders.metal */,
+				3AF7E9C01EB64A46003BB06D /* ShaderTypes.h */,
+				3AFD65751F71A8AB0008A125 /* ViewController.h */,
+				3AFD656A1F71A8900008A125 /* ViewController.m */,
+				3AFD65691F71A8900008A125 /* main.m */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		3AF7E9C91EB64A46003BB06D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3AF7E9C81EB64A46003BB06D /* FlutterWideGamutPrototype.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3AFD65411F71A6D00008A125 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				0D7843182970D3EE00E5B44B /* logo.png */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3AF7E9C71EB64A46003BB06D /* FlutterWideGamutPrototype-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AF7EA1B1EB64A46003BB06D /* Build configuration list for PBXNativeTarget "FlutterWideGamutPrototype-iOS" */;
+			buildPhases = (
+				3AF7E9C41EB64A46003BB06D /* Sources */,
+				3AF7E9C51EB64A46003BB06D /* Frameworks */,
+				3AF7E9C61EB64A46003BB06D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FlutterWideGamutPrototype-iOS";
+			productName = iOS;
+			productReference = 3AF7E9C81EB64A46003BB06D /* FlutterWideGamutPrototype.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3AF7E9B81EB64A46003BB06D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1200;
+				ORGANIZATIONNAME = Apple;
+				TargetAttributes = {
+					3AF7E9C71EB64A46003BB06D = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = S8QB4VV633;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 3AF7E9BB1EB64A46003BB06D /* Build configuration list for PBXProject "FlutterWideGamutPrototype" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3AF7E9B71EB64A46003BB06D;
+			productRefGroup = 3AF7E9C91EB64A46003BB06D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3AF7E9C71EB64A46003BB06D /* FlutterWideGamutPrototype-iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3AF7E9C61EB64A46003BB06D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D7843192970D3EE00E5B44B /* logo.png in Resources */,
+				3AFD65641F71A7240008A125 /* Main.storyboard in Resources */,
+				3AFD65631F71A7240008A125 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3AF7E9C41EB64A46003BB06D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63B42F161ED2063300859D09 /* Shaders.metal in Sources */,
+				3AF7EA0A1EB64A46003BB06D /* Renderer.m in Sources */,
+				3A30EDF91EB67EA800B4FC0B /* Image.mm in Sources */,
+				3AFD656F1F71A89E0008A125 /* ViewController.m in Sources */,
+				3AFD65721F71A8A10008A125 /* main.m in Sources */,
+				3AFD656C1F71A8980008A125 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3AFD65471F71A7070008A125 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3AFD65481F71A7070008A125 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		3AFD65491F71A7070008A125 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3AFD654A1F71A7070008A125 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3AF7EA191EB64A46003BB06D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+			};
+			name = Debug;
+		};
+		3AF7EA1A1EB64A46003BB06D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+			};
+			name = Release;
+		};
+		3AF7EA1C1EB64A46003BB06D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = S8QB4VV633;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					TARGET_IOS,
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.$(PRODUCT_NAME)";
+				PRODUCT_NAME = FlutterWideGamutPrototype;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3AF7EA1D1EB64A46003BB06D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = S8QB4VV633;
+				GCC_PREPROCESSOR_DEFINITIONS = TARGET_IOS;
+				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.$(PRODUCT_NAME)";
+				PRODUCT_NAME = FlutterWideGamutPrototype;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3AF7E9BB1EB64A46003BB06D /* Build configuration list for PBXProject "FlutterWideGamutPrototype" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AF7EA191EB64A46003BB06D /* Debug */,
+				3AF7EA1A1EB64A46003BB06D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3AF7EA1B1EB64A46003BB06D /* Build configuration list for PBXNativeTarget "FlutterWideGamutPrototype-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AF7EA1C1EB64A46003BB06D /* Debug */,
+				3AF7EA1D1EB64A46003BB06D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3AF7E9B81EB64A46003BB06D /* Project object */;
+}
