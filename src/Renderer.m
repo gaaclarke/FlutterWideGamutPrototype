@@ -47,6 +47,15 @@
   if (self) {
     _device = mtkView.device;
 
+    BOOL supportsBGRA10 =
+        UIScreen.mainScreen.traitCollection.displayGamut == UIDisplayGamutP3;
+    if (@available(iOS 13.0, *)) {
+      supportsBGRA10 &= [_device supportsFamily:MTLGPUFamilyApple3];
+    } else {
+      supportsBGRA10 &= [_device supportsFeatureSet:MTLFeatureSet_iOS_GPUFamily3_v1];
+    }
+    NSAssert(supportsBGRA10, @"The sample needs a device with BGRA10 support.");
+
     NSURL *imageFileLocation =
         [[NSBundle mainBundle] URLForResource:@"logo"
                                 withExtension:@"png"];
