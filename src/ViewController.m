@@ -16,7 +16,7 @@
   // format and making sure that the color space is RGB Linear.
   _view.colorPixelFormat = MTLPixelFormatBGR10_XR;
   CGColorSpaceRef linearRgb =
-      CGColorSpaceCreateWithName(kCGColorSpaceGenericRGBLinear);
+      CGColorSpaceCreateWithName(kCGColorSpaceExtendedSRGB);
   CAMetalLayer *layer = (CAMetalLayer *)_view.layer;
   layer.colorspace = linearRgb;
   CFRelease(linearRgb);

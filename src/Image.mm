@@ -12,7 +12,7 @@
     // Notice that we are going to decompress the image to RGB Linear, which
     // matches the color space of the render surface.
     CGColorSpaceRef rgb =
-        CGColorSpaceCreateWithName(kCGColorSpaceGenericRGBLinear);
+        CGColorSpaceCreateWithName(kCGColorSpaceExtendedSRGB);
     NSMutableData *temp = [[NSMutableData alloc]
         initWithLength:image.extent.size.width * image.extent.size.height * 16];
     [context render:image
@@ -23,41 +23,43 @@
              format:kCIFormatRGBAf
          colorSpace:rgb];
     CFRelease(rgb);
-    NSMutableData *data = [[NSMutableData alloc]
-        initWithLength:image.extent.size.width * image.extent.size.height * 8];
-    const float *inPtr = static_cast<const float *>(temp.bytes);
-    uint64_t *outPtr = static_cast<uint64_t *>(data.mutableBytes);
-
-    // Convert RGBAf to BGRA10_XR.
-    for (int i = 0; i < image.extent.size.height; ++i) {
-      for (int j = 0; j < image.extent.size.width; ++j) {
-        float r = inPtr[0];
-        float g = inPtr[1];
-        float b = inPtr[2];
-        float a = inPtr[3];
-
-        uint64_t r16 = static_cast<uint64_t>(
-                           ((r + 0.752941) / (1.25098 + 0.752941)) * 0x3ff)
-                       << 6;
-        uint64_t g16 = static_cast<uint64_t>(
-                           ((g + 0.752941) / (1.25098 + 0.752941)) * 0x3ff)
-                       << 6;
-        uint64_t b16 = static_cast<uint64_t>(
-                           ((b + 0.752941) / (1.25098 + 0.752941)) * 0x3ff)
-                       << 6;
-        uint64_t a16 = static_cast<uint64_t>(
-                           ((a + 0.752941) / (1.25098 + 0.752941)) * 0x3ff)
-                       << 6;
-
-        *outPtr = a16 << 48 | r16 << 32 | g16 << 16 | b16;
-
-        outPtr += 1;
-        inPtr += 4;
-      }
-    }
+//    NSMutableData *data = [[NSMutableData alloc]
+//        initWithLength:image.extent.size.width * image.extent.size.height * 16];
+//    const float *inPtr = static_cast<const float *>(temp.bytes);
+//    uint64_t *outPtr = static_cast<uint64_t *>(data.mutableBytes);
+//
+//    // Convert RGBAf to BGRA10_XR.
+//    for (int i = 0; i < image.extent.size.height; ++i) {
+//      for (int j = 0; j < image.extent.size.width; ++j) {
+//        float r = inPtr[0];
+//        float g = inPtr[1];
+//        float b = inPtr[2];
+//        float a = inPtr[3];
+//
+//        float min = -0.5271f;
+//        float max = 1.66894f;
+//        uint64_t r16 = static_cast<uint64_t>(
+//                           ((r - min) / (max - min)) * 0x3ff)
+//                       << 6;
+//        uint64_t g16 = static_cast<uint64_t>(
+//                           ((g - min) / (max - min)) * 0x3ff)
+//                       << 6;
+//        uint64_t b16 = static_cast<uint64_t>(
+//                           ((b - min) / (max - min)) * 0x3ff)
+//                       << 6;
+//        uint64_t a16 = static_cast<uint64_t>(
+//                           ((a - min) / (max - min)) * 0x3ff)
+//                       << 6;
+//
+//        *outPtr = a16 << 48 | r16 << 32 | g16 << 16 | b16;
+//
+//        outPtr += 1;
+//        inPtr += 4;
+//      }
+//    }
     _width = image.extent.size.width;
     _height = image.extent.size.height;
-    _data = data;
+    _data = temp;
   }
   return self;
 }
