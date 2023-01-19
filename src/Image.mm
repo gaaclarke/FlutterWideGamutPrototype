@@ -12,7 +12,6 @@
   return MTLPixelFormatRGBA16Float;
 }
 
-
 - (nullable instancetype)initWithPNGFileAtLocation:(nonnull NSURL *)location {
   self = [super init];
   if (self) {
@@ -30,40 +29,9 @@
              format:kCIFormatRGBAh
          colorSpace:rgb];
     CFRelease(rgb);
-//    NSMutableData *data = [[NSMutableData alloc]
-//        initWithLength:image.extent.size.width * image.extent.size.height * 16];
-//    const float *inPtr = static_cast<const float *>(temp.bytes);
-//    uint64_t *outPtr = static_cast<uint64_t *>(data.mutableBytes);
-//
-//    // Convert RGBAf to BGRA10_XR.
-//    for (int i = 0; i < image.extent.size.height; ++i) {
-//      for (int j = 0; j < image.extent.size.width; ++j) {
-//        float r = inPtr[0];
-//        float g = inPtr[1];
-//        float b = inPtr[2];
-//        float a = inPtr[3];
-//
-//        float min = -0.5271f;
-//        float max = 1.66894f;
-//        uint64_t r16 = static_cast<uint64_t>(
-//                           ((r - min) / (max - min)) * 0x3ff)
-//                       << 6;
-//        uint64_t g16 = static_cast<uint64_t>(
-//                           ((g - min) / (max - min)) * 0x3ff)
-//                       << 6;
-//        uint64_t b16 = static_cast<uint64_t>(
-//                           ((b - min) / (max - min)) * 0x3ff)
-//                       << 6;
-//        uint64_t a16 = static_cast<uint64_t>(
-//                           ((a - min) / (max - min)) * 0x3ff)
-//                       << 6;
-//
-//        *outPtr = a16 << 48 | r16 << 32 | g16 << 16 | b16;
-//
-//        outPtr += 1;
-//        inPtr += 4;
-//      }
-//    }
+
+    // TODO: Investigate using MTLPixelFormatBGR10_XR_sRGB with an optional MTLPixelFormatA8Unorm.
+    
     _width = image.extent.size.width;
     _height = image.extent.size.height;
     _data = temp;
