@@ -12,7 +12,7 @@
     // Notice that we are going to decompress the image to RGB Linear, which
     // matches the color space of the render surface.
     CGColorSpaceRef rgb =
-        CGColorSpaceCreateWithName(kCGColorSpaceGenericRGBLinear);
+        CGColorSpaceCreateWithName(kCGColorSpaceExtendedSRGB);
     NSMutableData *temp = [[NSMutableData alloc]
         initWithLength:image.extent.size.width * image.extent.size.height * 16];
     [context render:image
