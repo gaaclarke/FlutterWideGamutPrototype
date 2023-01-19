@@ -4,23 +4,30 @@
 
 @implementation Image
 
+- (NSUInteger)pixelWidth {
+  return 8;
+}
+
+- (MTLPixelFormat)pixelFormat {
+  return MTLPixelFormatRGBA16Float;
+}
+
+
 - (nullable instancetype)initWithPNGFileAtLocation:(nonnull NSURL *)location {
   self = [super init];
   if (self) {
     CIImage *image = [CIImage imageWithContentsOfURL:location];
     CIContext *context = [[CIContext alloc] init];
-    // Notice that we are going to decompress the image to RGB Linear, which
-    // matches the color space of the render surface.
     CGColorSpaceRef rgb =
         CGColorSpaceCreateWithName(kCGColorSpaceExtendedSRGB);
     NSMutableData *temp = [[NSMutableData alloc]
-        initWithLength:image.extent.size.width * image.extent.size.height * 16];
+        initWithLength:image.extent.size.width * image.extent.size.height * 8];
     [context render:image
            toBitmap:temp.mutableBytes
-           rowBytes:image.extent.size.width * 16
+           rowBytes:image.extent.size.width * 8
              bounds:CGRectMake(0, 0, image.extent.size.width,
                                image.extent.size.height)
-             format:kCIFormatRGBAf
+             format:kCIFormatRGBAh
          colorSpace:rgb];
     CFRelease(rgb);
 //    NSMutableData *data = [[NSMutableData alloc]

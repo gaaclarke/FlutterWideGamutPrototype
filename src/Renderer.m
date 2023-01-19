@@ -21,14 +21,14 @@
   NSAssert(image, @"Failed to create the image from %@", url.absoluteString);
 
   MTLTextureDescriptor *textureDescriptor = [MTLTextureDescriptor
-      texture2DDescriptorWithPixelFormat:MTLPixelFormatRGBA32Float
+      texture2DDescriptorWithPixelFormat:image.pixelFormat
                                    width:image.width
                                   height:image.height
                                mipmapped:NO];
 
   id<MTLTexture> texture = [_device newTextureWithDescriptor:textureDescriptor];
 
-  NSUInteger bytesPerRow = 16 * image.width;
+  NSUInteger bytesPerRow = image.pixelWidth * image.width;
 
   MTLRegion region = {
       {0, 0, 0},                     // MTLOrigin
