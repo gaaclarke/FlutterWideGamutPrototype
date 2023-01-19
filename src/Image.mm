@@ -9,6 +9,8 @@
   if (self) {
     CIImage *image = [CIImage imageWithContentsOfURL:location];
     CIContext *context = [[CIContext alloc] init];
+    // Notice that we are going to decompress the image to RGB Linear, which
+    // matches the color space of the render surface.
     CGColorSpaceRef rgb =
         CGColorSpaceCreateWithName(kCGColorSpaceExtendedSRGB);
     NSMutableData *temp = [[NSMutableData alloc]
