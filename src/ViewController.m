@@ -12,14 +12,14 @@
 
   _view = (MTKView *)self.view;
 
-  // Notice that here we are setting the rendering surface to a 64bit/pixel
-  // format and making sure that the color space is RGB Linear.
+  // Notice that here we are setting the rendering surface to a pixel
+  // format that represents more than 2^24 colors.
   _view.colorPixelFormat = MTLPixelFormatBGR10_XR;
-  CGColorSpaceRef linearRgb =
+  CGColorSpaceRef srgb =
       CGColorSpaceCreateWithName(kCGColorSpaceExtendedSRGB);
   CAMetalLayer *layer = (CAMetalLayer *)_view.layer;
-  layer.colorspace = linearRgb;
-  CFRelease(linearRgb);
+  layer.colorspace = srgb;
+  CFRelease(srgb);
 
   _view.device = MTLCreateSystemDefaultDevice();
 
