@@ -7,6 +7,13 @@
   Renderer *_renderer;
 }
 
+- (UIView*)view {
+  if (!_view) {
+    _view = [[MTKView alloc] init];
+  }
+  return _view;
+}
+
 - (void)viewDidLoad {
   [super viewDidLoad];
 
