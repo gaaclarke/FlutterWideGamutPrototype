@@ -10,6 +10,7 @@
 		0D7843192970D3EE00E5B44B /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D7843182970D3EE00E5B44B /* logo.png */; };
 		0DBE1A3C29847E1E009E8FFC /* FlutterWideGamutPrototypeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DBE1A3B29847E1E009E8FFC /* FlutterWideGamutPrototypeUITests.m */; };
 		0DBE1A3E29847E1E009E8FFC /* FlutterWideGamutPrototypeUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DBE1A3D29847E1E009E8FFC /* FlutterWideGamutPrototypeUITestsLaunchTests.m */; };
+		0DBE1A4B298493B2009E8FFC /* FlutterWideGamutPrototypeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DBE1A4A298493B2009E8FFC /* FlutterWideGamutPrototypeTests.m */; };
 		3A30EDF91EB67EA800B4FC0B /* Image.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3A30EDF81EB67EA800B4FC0B /* Image.mm */; };
 		3AF7EA0A1EB64A46003BB06D /* Renderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF7E9BF1EB64A46003BB06D /* Renderer.m */; };
 		3AFD65631F71A7240008A125 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AFD65471F71A7070008A125 /* LaunchScreen.storyboard */; };
@@ -28,6 +29,13 @@
 			remoteGlobalIDString = 3AF7E9C71EB64A46003BB06D;
 			remoteInfo = "FlutterWideGamutPrototype-iOS";
 		};
+		0DBE1A4C298493B2009E8FFC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3AF7E9B81EB64A46003BB06D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3AF7E9C71EB64A46003BB06D;
+			remoteInfo = "FlutterWideGamutPrototype-iOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +43,8 @@
 		0DBE1A3929847E1E009E8FFC /* FlutterWideGamutPrototypeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlutterWideGamutPrototypeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DBE1A3B29847E1E009E8FFC /* FlutterWideGamutPrototypeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlutterWideGamutPrototypeUITests.m; sourceTree = "<group>"; };
 		0DBE1A3D29847E1E009E8FFC /* FlutterWideGamutPrototypeUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlutterWideGamutPrototypeUITestsLaunchTests.m; sourceTree = "<group>"; };
+		0DBE1A48298493B2009E8FFC /* FlutterWideGamutPrototypeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlutterWideGamutPrototypeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0DBE1A4A298493B2009E8FFC /* FlutterWideGamutPrototypeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlutterWideGamutPrototypeTests.m; sourceTree = "<group>"; };
 		3A30EDF71EB67EA800B4FC0B /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
 		3A30EDF81EB67EA800B4FC0B /* Image.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Image.mm; sourceTree = "<group>"; };
 		3AF7E9BE1EB64A46003BB06D /* Renderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Renderer.h; sourceTree = "<group>"; };
@@ -60,6 +70,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0DBE1A45298493B2009E8FFC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3AF7E9C51EB64A46003BB06D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -79,6 +96,14 @@
 			path = FlutterWideGamutPrototypeUITests;
 			sourceTree = "<group>";
 		};
+		0DBE1A49298493B2009E8FFC /* FlutterWideGamutPrototypeTests */ = {
+			isa = PBXGroup;
+			children = (
+				0DBE1A4A298493B2009E8FFC /* FlutterWideGamutPrototypeTests.m */,
+			);
+			path = FlutterWideGamutPrototypeTests;
+			sourceTree = "<group>";
+		};
 		3AF7E9B71EB64A46003BB06D = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +113,7 @@
 				3AF7E9BC1EB64A46003BB06D /* src */,
 				3AFD65411F71A6D00008A125 /* assets */,
 				0DBE1A3A29847E1E009E8FFC /* FlutterWideGamutPrototypeUITests */,
+				0DBE1A49298493B2009E8FFC /* FlutterWideGamutPrototypeTests */,
 				3AF7E9C91EB64A46003BB06D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -115,6 +141,7 @@
 			children = (
 				3AF7E9C81EB64A46003BB06D /* FlutterWideGamutPrototype.app */,
 				0DBE1A3929847E1E009E8FFC /* FlutterWideGamutPrototypeUITests.xctest */,
+				0DBE1A48298493B2009E8FFC /* FlutterWideGamutPrototypeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -147,6 +174,24 @@
 			productName = FlutterWideGamutPrototypeUITests;
 			productReference = 0DBE1A3929847E1E009E8FFC /* FlutterWideGamutPrototypeUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		0DBE1A47298493B2009E8FFC /* FlutterWideGamutPrototypeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0DBE1A4E298493B2009E8FFC /* Build configuration list for PBXNativeTarget "FlutterWideGamutPrototypeTests" */;
+			buildPhases = (
+				0DBE1A44298493B2009E8FFC /* Sources */,
+				0DBE1A45298493B2009E8FFC /* Frameworks */,
+				0DBE1A46298493B2009E8FFC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0DBE1A4D298493B2009E8FFC /* PBXTargetDependency */,
+			);
+			name = FlutterWideGamutPrototypeTests;
+			productName = FlutterWideGamutPrototypeTests;
+			productReference = 0DBE1A48298493B2009E8FFC /* FlutterWideGamutPrototypeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		3AF7E9C71EB64A46003BB06D /* FlutterWideGamutPrototype-iOS */ = {
 			isa = PBXNativeTarget;
@@ -181,6 +226,12 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = 3AF7E9C71EB64A46003BB06D;
 					};
+					0DBE1A47298493B2009E8FFC = {
+						CreatedOnToolsVersion = 14.1;
+						DevelopmentTeam = S8QB4VV633;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3AF7E9C71EB64A46003BB06D;
+					};
 					3AF7E9C71EB64A46003BB06D = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = S8QB4VV633;
@@ -203,12 +254,20 @@
 			targets = (
 				3AF7E9C71EB64A46003BB06D /* FlutterWideGamutPrototype-iOS */,
 				0DBE1A3829847E1E009E8FFC /* FlutterWideGamutPrototypeUITests */,
+				0DBE1A47298493B2009E8FFC /* FlutterWideGamutPrototypeTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		0DBE1A3729847E1E009E8FFC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DBE1A46298493B2009E8FFC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -237,6 +296,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0DBE1A44298493B2009E8FFC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DBE1A4B298493B2009E8FFC /* FlutterWideGamutPrototypeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3AF7E9C41EB64A46003BB06D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -257,6 +324,11 @@
 			isa = PBXTargetDependency;
 			target = 3AF7E9C71EB64A46003BB06D /* FlutterWideGamutPrototype-iOS */;
 			targetProxy = 0DBE1A3F29847E1E009E8FFC /* PBXContainerItemProxy */;
+		};
+		0DBE1A4D298493B2009E8FFC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3AF7E9C71EB64A46003BB06D /* FlutterWideGamutPrototype-iOS */;
+			targetProxy = 0DBE1A4C298493B2009E8FFC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -324,6 +396,56 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "FlutterWideGamutPrototype-iOS";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0DBE1A4F298493B2009E8FFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S8QB4VV633;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.FlutterWideGamutPrototypeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlutterWideGamutPrototype.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FlutterWideGamutPrototype";
+			};
+			name = Debug;
+		};
+		0DBE1A50298493B2009E8FFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S8QB4VV633;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.FlutterWideGamutPrototypeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlutterWideGamutPrototype.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FlutterWideGamutPrototype";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -478,6 +600,15 @@
 			buildConfigurations = (
 				0DBE1A4129847E1E009E8FFC /* Debug */,
 				0DBE1A4229847E1E009E8FFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0DBE1A4E298493B2009E8FFC /* Build configuration list for PBXNativeTarget "FlutterWideGamutPrototypeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0DBE1A4F298493B2009E8FFC /* Debug */,
+				0DBE1A50298493B2009E8FFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
