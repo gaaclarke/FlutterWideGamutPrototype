@@ -23,8 +23,17 @@ static bool Almost(float x, float y) { return fabsf(x - y) < 0.01; }
 }
 
 - (void)testExample {
-  UIViewController *rootViewController =
-      [UIApplication sharedApplication].windows[0].rootViewController;
+  UIViewController *rootViewController;
+      
+  if (@available(iOS 13.0, *)) {
+    UIWindowScene* windowScene =
+        (UIWindowScene*)[[UIApplication sharedApplication].connectedScenes anyObject];
+    XCTAssertTrue([windowScene isKindOfClass:[UIWindowScene class]]);
+    rootViewController = windowScene.windows[0].rootViewController;
+  } else {
+    rootViewController = [UIApplication sharedApplication].windows[0].rootViewController;
+  }
+  
   ViewController *viewController = (ViewController *)rootViewController;
   XCTAssertTrue([viewController isKindOfClass:[ViewController class]]);
   MTKView *view = (MTKView *)viewController.view;
@@ -42,31 +51,29 @@ static bool Almost(float x, float y) { return fabsf(x - y) < 0.01; }
   }
 
   XCTestExpectation *expectation = [self expectationWithDescription:@"foo"];
-  dispatch_after(
-      dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)),
-      dispatch_get_main_queue(), ^{
-        uint32_t *bytes =
-            (uint32_t *)malloc(texture.width * texture.height * bytesPerPixel);
-        [texture getBytes:bytes
-              bytesPerRow:texture.width * bytesPerPixel
-               fromRegion:MTLRegionMake2D(0, 0, texture.width, texture.height)
-              mipmapLevel:0];
-        bool foundDeepRed = false;
-        for (int i = 0; i < texture.width * texture.height; ++i) {
-          float b = DecodeBGR10(bytes[i] & 0x3ff);
-          float g = DecodeBGR10((bytes[i] >> 10) & 0x3ff);
-          float r = DecodeBGR10((bytes[i] >> 20) & 0x3ff);
+  [viewController.renderer addCompletionHandler:^{
+    uint32_t *bytes =
+        (uint32_t *)malloc(texture.width * texture.height * bytesPerPixel);
+    [texture getBytes:bytes
+          bytesPerRow:texture.width * bytesPerPixel
+           fromRegion:MTLRegionMake2D(0, 0, texture.width, texture.height)
+          mipmapLevel:0];
+    bool foundDeepRed = false;
+    for (int i = 0; i < texture.width * texture.height; ++i) {
+      float b = DecodeBGR10(bytes[i] & 0x3ff);
+      float g = DecodeBGR10((bytes[i] >> 10) & 0x3ff);
+      float r = DecodeBGR10((bytes[i] >> 20) & 0x3ff);
 
-          if (Almost(r, 1.0931f) && Almost(g, -0.2268f) &&
-              Almost(b, -0.1501f)) {
-            foundDeepRed = true;
-            break;
-          }
-        }
-        free(bytes);
-        XCTAssertTrue(foundDeepRed);
-        [expectation fulfill];
-      });
+      if (Almost(r, 1.0931f) && Almost(g, -0.2268f) &&
+          Almost(b, -0.1501f)) {
+        foundDeepRed = true;
+        break;
+      }
+    }
+    free(bytes);
+    XCTAssertTrue(foundDeepRed);
+    [expectation fulfill];
+  }];
 
   [self waitForExpectations:@[ expectation ] timeout:20];
 }

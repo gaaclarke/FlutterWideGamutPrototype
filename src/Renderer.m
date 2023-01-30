@@ -13,6 +13,7 @@
   id<MTLBuffer> _vertices;
   NSUInteger _numVertices;
   vector_uint2 _viewportSize;
+  NSMutableArray* _completionHandlers;
 }
 
 - (id<MTLTexture>)loadTextureUsingImage:(NSURL *)url {
@@ -49,11 +50,6 @@
 
     BOOL supportsBGRA10 =
         UIScreen.mainScreen.traitCollection.displayGamut == UIDisplayGamutP3;
-    if (@available(iOS 13.0, *)) {
-      supportsBGRA10 &= [_device supportsFamily:MTLGPUFamilyApple3];
-    } else {
-      supportsBGRA10 &= [_device supportsFeatureSet:MTLFeatureSet_iOS_GPUFamily3_v1];
-    }
     NSAssert(supportsBGRA10, @"The sample needs a device with BGRA10 support.");
 
     NSURL *imageFileLocation =
@@ -98,6 +94,8 @@
     NSAssert(_pipelineState, @"Failed to create pipeline state: %@", error);
 
     _commandQueue = [_device newCommandQueue];
+    
+    _completionHandlers = [[NSMutableArray alloc] init];
   }
 
   return self;
@@ -142,9 +140,19 @@
     [renderEncoder endEncoding];
 
     [commandBuffer presentDrawable:view.currentDrawable];
+    for (dispatch_block_t handler in _completionHandlers) {
+      [commandBuffer addCompletedHandler:^(id<MTLCommandBuffer> _Nonnull x) {
+        handler();
+      }];
+    }
+    [_completionHandlers removeAllObjects];
   }
 
   [commandBuffer commit];
+}
+
+- (void)addCompletionHandler:(dispatch_block_t)handler {
+  [_completionHandlers addObject:handler];
 }
 
 @end
