@@ -57,8 +57,8 @@ static bool Almost(float x, float y) { return fabsf(x - y) < 0.01; }
           float g = DecodeBGR10((bytes[i] >> 10) & 0x3ff);
           float r = DecodeBGR10((bytes[i] >> 20) & 0x3ff);
 
-          if (Almost(r, 1.088553f) && Almost(g, -0.228477f) &&
-              Almost(b, -0.152156f)) {
+          if (Almost(r, 1.0931f) && Almost(g, -0.2268f) &&
+              Almost(b, -0.1501f)) {
             foundDeepRed = true;
             break;
           }
